@@ -1,22 +1,3 @@
-#!/usr/bin/env python3
-"""
-predict.py
-
-Usage:
-  # Batch predict from CSV (file may contain raw or already encoded columns)
-  python predict.py --model churn_model.joblib --csv new_customers.csv --out predictions.csv
-
-  # Interactive single prediction (recommended for quick testing)
-  python predict.py --model churn_model.joblib --interactive
-
-Notes:
- - The saved model file must be a joblib containing a dict with keys:
-     {"model": <estimator>, "scaler": <scaler>, "feature_columns": <list_of_columns>}
- - The script will reindex input data to the saved feature_columns and fill missing columns with 0.
- - If your input CSV contains raw categorical columns that were one-hot encoded during training,
-   make sure to provide the same one-hot column names (or provide numeric values for numeric columns).
-"""
-
 import argparse
 import ast
 import json
