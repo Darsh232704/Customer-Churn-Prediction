@@ -239,7 +239,6 @@ def train_and_evaluate(X, y, test_size=0.2, random_state=42,
 
     print(f"Saved model+scaler to {out_model_path}")
 
-    # ⭐ Return everything you need for later analysis
     return voting, scaler, X_test_scaled, y_test
 
 
